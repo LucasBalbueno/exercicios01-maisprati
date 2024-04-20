@@ -1,20 +1,21 @@
+let num = 101;
 let contador = 0;
-let numero = 101;
 
-while (contador < 50) {
-    let isPrimo = true;
+while(contador < 50) {
+    let divisores = 0;
+    let i = 1;
 
-    for (let i = 2; i <= Math.sqrt(numero); i++) {
-        if (numero % i === 0) {
-            isPrimo = false;
-            break;
+    while(i <= num) {
+        if(num % i === 0) {
+            divisores++;
         }
+        i++;
     }
 
-    if (isPrimo) {
-        console.log(numero);
+    if(divisores === 2) {
+        console.log(num);
         contador++;
     }
 
-    numero++;
+    num++;
 }
